@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Unsplash Link Copier",
+  "version": "1.0",
+  "description": "Copy the current page link on Unsplash.",
+  "permissions": ["activeTab", "storage", "tabs", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["*://unsplash.com/photos/*"],
+      "js": ["popup.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon.png",
+      "48": "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  }
+}
